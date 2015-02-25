@@ -1,6 +1,6 @@
 class AccessController < ApplicationController
   before_action :prevent_login_signup, only: [:signup, :login]
-
+  # before_action :mandatory_login, only: [:home]
   def signup
     @user = User.new
   end
